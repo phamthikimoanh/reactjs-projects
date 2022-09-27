@@ -1,0 +1,29 @@
+body,
+html {
+  font-size: 18px;
+  font-family: Poppins;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+div {
+  font-size: 1em;
+}
+
+@media (max-width:768px) {
+
+  html,
+  body {
+    font: 16px;
+  }
+
+  p,
+  div {
+    font-size: 1em;
+  }
+}
+
+@media (max-width:426px) {
+
+}

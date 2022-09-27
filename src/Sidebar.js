@@ -35,7 +35,7 @@ const StyledSidebar = styled.div`
 `;
 
 export default function Sidebar() {
-  let NAV_ITEMS = ["Home", "To do list"];
+  let NAV_ITEMS = ["Home", "To do list", "Color Pallettes"];
   return (
     <StyledSidebar>
       <LogoImg src={Logo} alt="logo" />

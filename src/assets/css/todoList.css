@@ -1,0 +1,38 @@
+.list-button {
+  display: flex;
+  align-items: center;
+}
+.show-todos li{
+  display: flex;
+  flex-direction: row;
+}
+.show-todos{
+  padding: 0;
+}
+.text-center{text-align: center;}
+
+/* input */
+textarea:focus, input:focus{
+  outline: none;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: #0f0f14;font-size: 1rem;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #0f0f14;font-size: 1rem;
+}
+
+::placeholder {
+  color: #0f0f14;font-size: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .show-todos li{
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+}
