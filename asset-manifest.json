@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/reactjs-projects/static/css/main.91c88615.css",
-    "main.js": "/reactjs-projects/static/js/main.d3d74d88.js",
+    "main.css": "/reactjs-projects/static/css/main.59e87f6a.css",
+    "main.js": "/reactjs-projects/static/js/main.ea08d165.js",
     "static/js/787.cc5047ac.chunk.js": "/reactjs-projects/static/js/787.cc5047ac.chunk.js",
     "static/media/jena-logo-2.gif": "/reactjs-projects/static/media/jena-logo-2.4163f195ded2a71c273e.gif",
     "index.html": "/reactjs-projects/index.html",
-    "main.91c88615.css.map": "/reactjs-projects/static/css/main.91c88615.css.map",
-    "main.d3d74d88.js.map": "/reactjs-projects/static/js/main.d3d74d88.js.map",
+    "main.59e87f6a.css.map": "/reactjs-projects/static/css/main.59e87f6a.css.map",
+    "main.ea08d165.js.map": "/reactjs-projects/static/js/main.ea08d165.js.map",
     "787.cc5047ac.chunk.js.map": "/reactjs-projects/static/js/787.cc5047ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91c88615.css",
-    "static/js/main.d3d74d88.js"
+    "static/css/main.59e87f6a.css",
+    "static/js/main.ea08d165.js"
   ]
 }
