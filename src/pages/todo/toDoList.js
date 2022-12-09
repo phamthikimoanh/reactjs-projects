@@ -1,12 +1,8 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button, Input, InputCheckbox } from '../../utils/style-components';
+import { Button, Input, InputCheckbox } from './style-components';
 import { theme } from '../../utils/constants';
-import {
-	BsFillTrashFill,
-	BsPlusLg,
-	BsFillFileEarmarkPostFill,
-} from 'react-icons/bs';
+import { BsFillTrashFill, BsPlusLg } from 'react-icons/bs';
 
 const InputForm = (props) => {
 	const { handleSubmit, handleChange, value } = props;
@@ -114,20 +110,16 @@ export default function ToDoList() {
 		setValue('');
 	};
 
-	const handleDelete = (task) => {
-		console.log('handleDelete=>', task);
+	const handleDelete = (id) => {
+		console.log('handleDelete=>', id);
 
-		dispatch({ type: 'removeTodo', payload: task });
+		dispatch({ type: 'removeTodo', payload: id });
 	};
 	let isClicked = false;
 
 	const handleEdit = (id) => {
 		let value = elRefs[id].current.value;
 		elRefs[id].current.readOnly = !elRefs[id].current.readOnly;
-		console.log(
-			'handleEdit editElRefs[id]',
-			editElRefs[id].current.children[0]
-		);
 		editElRefs[id].current.children[1].innerHTML = !isClicked ? 'Save' : 'Edit';
 		isClicked &&
 			editElRefs[id].current.children[1].innerHTML === 'Edit' &&
@@ -196,7 +188,7 @@ export default function ToDoList() {
 									id={index}
 									status={value.status}
 									refButton={editElRefs[index]}
-									handleDelete={() => handleDelete(value.task)}
+									handleDelete={() => handleDelete(index)}
 									handleEdit={() => handleEdit(index)}
 									handleMarkDone={() => handleMarkDone(index)}
 								/>
@@ -215,7 +207,7 @@ const reducer = (state, action) => {
 		}
 		case 'removeTodo':
 			let newValue = state.toDoList.filter(
-				(item) => item.task !== action.payload
+				(_, index) => index !== action.payload
 			);
 			return { ...state, ...{ toDoList: [...newValue] } };
 
